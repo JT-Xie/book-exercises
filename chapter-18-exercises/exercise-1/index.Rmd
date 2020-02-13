@@ -1,0 +1,37 @@
+---
+title: "R Markdown Demos"
+output: html_document
+---
+
+## This is my report
+
+I like writing **reports**
+
+This is the code we will look at in class. just plain old Markdown that lets you rendertext in **bold** or _italics_. However, you canput in a block of R code, and the document willshow the code and the results!
+```{r example,, include = FALSE}
+numbers <- runif(1:100)  # make random numbers
+hist(numbers)  # show histogram of the numbers
+numbers_mean <- mean(numbers)  # save the mean
+```
+
+The mean of the above histogram is **`r numbers_mean`**
+
+```{r kable_example, echo=FALSE}
+library(knitr)  # load the package (once per document)# make a data frame
+letters <- c("a", "b", "c", "d")
+numbers <- 1:4
+df <- data.frame(letters = letters, numbers = numbers)# "return" the table to render it
+kable(df)
+```
+
+
+```{r pasted_list_example, echo = FALSE}
+# Create a vector of animals
+animals <- c("Inception", "Django Unchained", "Titanic")
+
+# Paste `-` in front of each animal and join the items together with
+# newlines between
+markdown_list <- paste("-", animals, collapse = "\n")
+```
+
+`r markdown_list`
