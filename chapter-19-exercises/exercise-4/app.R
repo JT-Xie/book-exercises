@@ -12,5 +12,5 @@ source("app_server.R")
 # Run the app through this file.
 
 # Create a new `shinyApp()` using the loaded `ui` and `server` variables
-shinyApp(ui = ui, server = server)on!
+shinyApp(ui = ui, server = server)
   

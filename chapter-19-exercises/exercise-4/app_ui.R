@@ -9,7 +9,7 @@ library("shiny")
 # This layout will contain the following elements:
   intro_panel <- tabPanel(
   # A `titlePanel()` with the text "Income Inequality"
-  titlePanel("Income Inequality")
+  titlePanel("Income Inequality"),
 
   # A paragraph `p()` describing with the text: "The below diagram was created
   # by the New York Times to illustrate the increasing level of inequality in
@@ -31,7 +31,7 @@ library("shiny")
   # shows. Your paragraph should include both `strong()` and emphasized `em()`
   # text.
   p(paste0(strong("Description"), em("paragraph")))
-  )
+)
 
 # Next, we'll define a few UI elements to render in our second panel
 
